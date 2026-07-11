@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LP改善分析ツール</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">LP / Webページ改善診断</div>
+    <h1>LP改善分析ツール</h1>
+    <p>URLと目的を入力すると、LIFTモデル・影響力の武器・行動経済学のフレームでMECEに改善点を診断します。</p>
+  </header>
+
+  <form id="analyzeForm" class="card">
+    <div class="field">
+      <label for="url">分析したいページのURL<span class="req">必須</span></label>
+      <input type="url" id="url" name="url" required placeholder="https://example.com/lp">
+    </div>
+    <div class="field">
+      <label for="goal">このページの目的（ゴール）<span class="req">必須</span></label>
+      <input type="text" id="goal" name="goal" required placeholder="例：資料請求フォームの送信数を増やす">
+    </div>
+    <button type="submit" id="submitBtn" class="btn-solid">診断する</button>
+    <p class="hint">ページの実描画・スクリーンショット取得とAI分析のため、数十秒〜1分程度かかります。</p>
+    <div id="errorMsg" class="error-msg"></div>
+  </form>
+
+  <section id="result" class="result" hidden></section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
