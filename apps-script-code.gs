@@ -14,7 +14,10 @@ const HEADERS = [
   "送信日時","email","name","age","prefecture","occupation","height",
   "catchphrase","prosCons","friendsDescribe","hobby","holiday",
   "travelFreq","wantChildren","childrenCount","idealFamily","workLifeBalance",
-  "relationshipStatus","marriageTimeline","marriagePartnerWish","howFoundInaba"
+  "relationshipStatus","marriageTimeline","marriagePartnerWish","howFoundInaba",
+  "attractedTo","cookingForHim","firstDateSpot","messageToInaba","whyChooseMe",
+  "photoUrl","introVideoUrl","prVideoUrl",
+  "specialSkill","freeNote","mediaAppearance"
 ];
 
 function doPost(e) {

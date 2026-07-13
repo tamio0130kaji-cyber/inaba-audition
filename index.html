@@ -106,6 +106,18 @@
   .field label.q .req{color:var(--gold-deep);font-size:11px;margin-left:6px;letter-spacing:0.05em;}
   .field .hint{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
 
+  .field.highlight{
+    background:linear-gradient(135deg, rgba(184,146,63,0.10), rgba(184,146,63,0.02));
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:20px 18px 6px;
+  }
+  .tag-badge{
+    display:inline-block;background:linear-gradient(120deg,var(--gold),var(--gold-deep));
+    color:#fff;font-size:11px;letter-spacing:0.05em;font-weight:600;
+    border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:middle;
+  }
+
   input[type=text],input[type=email],input[type=number],textarea,select{
     width:100%;
     background:#ffffff;
@@ -183,7 +195,7 @@
   </div>
 
   <div class="progress-wrap">
-    <div class="progress-label">SECTION <span id="stepNum">1</span> / 5</div>
+    <div class="progress-label">SECTION <span id="stepNum">1</span> / 7</div>
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
   </div>
 
@@ -348,6 +360,82 @@
             <div class="choice"><input type="radio" name="howFoundInaba" id="hf3" value="SNS"><label for="hf3">SNS</label></div>
             <div class="choice"><input type="radio" name="howFoundInaba" id="hf4" value="この企画で初めて"><label for="hf4">この企画で初めて</label></div>
             <div class="choice"><input type="radio" name="howFoundInaba" id="hf5" value="その他"><label for="hf5">その他</label></div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="q">稲葉さんのどこに惹かれましたか？</label>
+          <textarea name="attractedTo" placeholder="稲葉さんの魅力を感じたポイントを教えてください"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="q">稲葉さんに作ってあげたい手料理</label>
+          <input type="text" name="cookingForHim" placeholder="例：肉じゃが">
+        </div>
+
+        <div class="field">
+          <label class="q">稲葉さんとの最初のデートで行きたい場所</label>
+          <input type="text" name="firstDateSpot" placeholder="例：夜景の見えるレストラン">
+        </div>
+
+        <div class="field">
+          <label class="q">稲葉さんへのメッセージ</label>
+          <textarea name="messageToInaba" placeholder="稲葉さんへのメッセージを自由にお書きください"></textarea>
+        </div>
+
+        <div class="field highlight">
+          <label class="q">なぜ私が選ばれるべきか<span class="tag-badge">必見</span></label>
+          <textarea name="whyChooseMe" placeholder="自分が選ばれるべき理由をアピールしてください"></textarea>
+        </div>
+      </section>
+
+      <!-- STEP 6 -->
+      <section class="step" data-step="6" hidden>
+        <div class="step-head">
+          <div class="step-num">VI.</div>
+          <div class="step-title">写真・動画</div>
+        </div>
+
+        <div class="field">
+          <label class="q">顔写真・全身写真のURL<span class="req">必須</span></label>
+          <input type="url" name="photoUrl" required placeholder="画像を共有フォルダ等にアップロードし、そのURLを貼ってください">
+          <div class="hint">Googleドライブやアルバムサービスなどで共有設定をした上でURLを貼ってください。</div>
+        </div>
+
+        <div class="field">
+          <label class="q">自己紹介動画のURL（任意・加点対象）</label>
+          <input type="url" name="introVideoUrl" placeholder="YouTube等の動画URL">
+        </div>
+
+        <div class="field">
+          <label class="q">「稲葉さんへの一言PR」動画URL（任意）</label>
+          <input type="url" name="prVideoUrl" placeholder="YouTube等の動画URL">
+        </div>
+      </section>
+
+      <!-- STEP 7 -->
+      <section class="step" data-step="7" hidden>
+        <div class="step-head">
+          <div class="step-num">VII.</div>
+          <div class="step-title">特技・その他</div>
+        </div>
+
+        <div class="field">
+          <label class="q">特技・得意なこと</label>
+          <input type="text" name="specialSkill" placeholder="例：ピアノ、料理、スポーツなど">
+        </div>
+
+        <div class="field">
+          <label class="q">その他、自由にどうぞ</label>
+          <textarea name="freeNote" placeholder="伝えたいことがあれば自由にお書きください"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="q">YouTube動画への出演について</label>
+          <div class="choices" data-name="mediaAppearance">
+            <div class="choice"><input type="radio" name="mediaAppearance" id="ma1" value="顔出しOK"><label for="ma1">顔出しOK</label></div>
+            <div class="choice"><input type="radio" name="mediaAppearance" id="ma2" value="顔出しNG"><label for="ma2">顔出しNG</label></div>
+            <div class="choice"><input type="radio" name="mediaAppearance" id="ma3" value="応相談"><label for="ma3">応相談</label></div>
           </div>
         </div>
 
